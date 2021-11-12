@@ -555,7 +555,12 @@ In order to implement rich interactivity beyond preconstructed templates, it is 
         - use D3 for remapping and drawing axes 
         - use something like React / Vue to handle rendering to DOM, user input
   
-  - 🚧 monotonic splines 🚧
+  - **Monotonic cubic splines** - often useful for drawing model-agnostic trends through points
+    - unlike other cubic spline methods, interpolated values must lie between the two points being interpolated, so you don’t get distracting overshoots for high-derivative segments.
+    - [Monotone Cubic Interpolation - observable notebook](https://observablehq.com/@danburzo/monotone-cubic-interpolation) - by Dan Burzo
+      - [demo cell](https://observablehq.com/@danburzo/monotone-cubic-interpolation#cell-7)
+    - [JavaScript - D3 implementation](http://using-d3js.com/05_04_curves.html)
+    - [Python - SciPy implementation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.PchipInterpolator.html)
 
 --------------------------------------------    
 # Appendix
