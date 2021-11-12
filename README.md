@@ -321,16 +321,57 @@ Being able to share results and code with others, especially without them having
 #### [:fa-table: go back to comparison table :fa-table:](#visualization-library-options)
 --------------------------------------------
 ## Interactivity 
-### Examples of useful interactivity 🚧
-- filtering (aka brushing)
-  - example w/ scatter plot, linked marginal distrubtions [altair - dot dash plot](https://altair-viz.github.io/gallery/dot_dash_plot.html)
+### Examples of useful interactivity
 
-- linking 
-  - subselecting distribution by category - [altair](https://altair-viz.github.io/gallery/interactive_cross_highlight.html)
+- **Filtering (aka brushing)**
+  - Altair 
+    - Seattle weather interactive - [demo](https://altair-viz.github.io/gallery/seattle_weather_interactive.html) ⭐
+    - linked range selection - [demo](https://altair-viz.github.io/user_guide/interactions.html#conditions-making-the-chart-respond)
+  - very useful in parallel coordinates 
+    - Plotly - [parallel coordinates with brushing](https://plotly.com/python/parallel-coordinates-plot/)
+
+- **Linking / cross-filtering** - connecting behavior across subplots
+  - **faceting / small multiples** - prerequisite for cross-filtering
+     - Altair 
+        - scatter plot with marginal distributions - [histogram demo](https://altair-viz.github.io/gallery/scatter_marginal_hist.html), [dot-dash plot demo](https://altair-viz.github.io/gallery/dot_dash_plot.html)
+     - Plotly - [several facet plot examples](https://plotly.com/python/facet-plots/)
+  - Linked filtering - [Plotly R demo](https://plotly-r.com/client-side-linking.html)
+  - Altair 
+    - subselecting distribution by category - [demo](https://altair-viz.github.io/gallery/interactive_cross_highlight.html)
+    - visualizing the correlation structure of weather data - [linked histogram example](https://towardsdatascience.com/altair-plot-deconstruction-visualizing-the-correlation-structure-of-weather-data-38fb5668c5b1)
+    - subselecting timeseries - [demo](https://altair-viz.github.io/gallery/select_detail.html)
+  - Bokeh 
+    - [linking - docs](https://docs.bokeh.org/en/latest/docs/user_guide/interaction/linking.html)
+    - Bokeh via HoloViz - [crossfiltering demo](http://holoviews.org/gallery/apps/bokeh/crossfilter.html)
+  
+  
+- **Highlights / tooltips** - responsive annotation ties different representations together
+  - Altair: [multi-line highlight](https://altair-viz.github.io/gallery/multiline_highlight.html)
+  - Altair: [simple scatter plot with tooltips](https://altair-viz.github.io/gallery/scatter_tooltips.html?highlight=tooltip) (limited customization)
+  - Bokeh hover tool [docs](https://docs.bokeh.org/en/latest/docs/user_guide/tools.html#userguide-tools-hover-tool)
+  - Plotly: 
+    - [hover text and formatting in python](https://plotly.com/python/hover-text-and-formatting/)
+    - [car exploration with hover events in Python/v3](https://plotly.com/python/v3/cars-exploration/)
+      - uses Figure Widgets 
 
 
-- Altair interactivity [gallery](https://larremorelab.github.io/)
 
+
+- **Plotly / Dash**
+  -  [Interactive Visualizations - docs](https://dash.plotly.com/interactive-graphing)
+
+- **Bokeh**
+  - Color slider example [demo](https://docs.bokeh.org/en/latest/docs/gallery/color_sliders.html)
+    - includes custom JavaScript callbacks
+  - [Making Interactions - docs](https://docs.bokeh.org/en/latest/docs/user_guide/interaction.html)
+  - [Linking - docs](https://docs.bokeh.org/en/latest/docs/user_guide/interaction/linking.html)
+
+
+- **Altair**
+  - [Interactive plot gallery](https://larremorelab.github.io/)
+  - [Bindings, Selections, Conditions: Making Charts Interactive](https://altair-viz.github.io/user_guide/interactions.html)
+    > One of the unique features of Altair, inherited from Vega-Lite, is a declarative grammar of not just visualization, but interaction. 
+    
 
 ### Custom callbacks:
 In order to implement rich interactivity beyond preconstructed templates, it is useful to have control over the `callbacks` or functions which execute after another event.
