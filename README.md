@@ -321,20 +321,29 @@ Being able to share results and code with others, especially without them having
 #### [:fa-table: go back to comparison table :fa-table:](#visualization-library-options)
 --------------------------------------------
 ## Interactivity 
+### Shortlist - my favorite examples
+- Seattle weather interactive - [demo](https://altair-viz.github.io/gallery/seattle_weather_interactive.html) ⭐
+- Using facets to identify patterns - Correlation over Time - [observable](https://observablehq.com/@observablehq/correlation-over-time?collection=@observablehq/analyzing-time-series-data)
+
 ### Examples of useful interactivity
 
-- **Filtering (aka brushing)**
+- **Filtering (aka brushing)** - dynamic queries
   - Altair 
     - Seattle weather interactive - [demo](https://altair-viz.github.io/gallery/seattle_weather_interactive.html) ⭐
     - linked range selection - [demo](https://altair-viz.github.io/user_guide/interactions.html#conditions-making-the-chart-respond)
   - very useful in parallel coordinates 
     - Plotly - [parallel coordinates with brushing](https://plotly.com/python/parallel-coordinates-plot/)
+  - Observable 
+    - [intro to brushing](https://observablehq.com/@uwdata/interaction?collection=@uwdata/visualization-curriculum), as well as [several rich examples](https://observablehq.com/@uwdata/interaction?collection=@uwdata/visualization-curriculum#cell-427)
 
 - **Linking / cross-filtering** - connecting behavior across subplots
   - **faceting / small multiples** - prerequisite for cross-filtering
      - Altair 
         - scatter plot with marginal distributions - [histogram demo](https://altair-viz.github.io/gallery/scatter_marginal_hist.html), [dot-dash plot demo](https://altair-viz.github.io/gallery/dot_dash_plot.html)
      - Plotly - [several facet plot examples](https://plotly.com/python/facet-plots/)
+     - Observable
+      - Multi-View Composition [tutorial](https://observablehq.com/@uwdata/multi-view-composition) by UW Data Lab
+ 
   - Linked filtering - [Plotly R demo](https://plotly-r.com/client-side-linking.html)
   - Altair 
     - subselecting distribution by category - [demo](https://altair-viz.github.io/gallery/interactive_cross_highlight.html)
@@ -535,10 +544,16 @@ In order to implement rich interactivity beyond preconstructed templates, it is 
     - Going Beyond Matplotlib and Seaborn (2021) [video](https://youtu.be/ms1v9TqpBP0), and [repo :fa-github:](https://github.com/skirmer/new-py-dataviz) by Stephanie Kirmer
       - has implementations for several common plot types across Bokeh, plotnine, Altair and Plotly
 
-  - React + D3 [video by Shirley Wu](https://youtu.be/zXBdNDnqV2Q)
-    - excellent breakdown of how D3 can interface with other javascript libraries to get the best use out of each 
-      - use D3 for remapping and drawing axes 
-      - use something like React / Vue to handle rendering to DOM, user input
+  - **Learning JavaScript-based visualization tools**
+    - UW Data has an excellent series of [tutorial notebooks](https://observablehq.com/collection/@uwdata/visualization-curriculum)
+      - the [Interaction notebook](https://observablehq.com/@uwdata/interaction?collection=@uwdata/visualization-curriculum) and [Introduction to Vega-Lite](https://observablehq.com/@uwdata/introduction-to-vega-lite?collection=@uwdata/visualization-curriculum) are especially good
+      - see also [Observable: Vega-Lite: A Crash Course - video](https://youtu.be/ZV_Yjcs5WtM) by Visnu Pitiyanuvath
+    - [Introduction to D3 - video](https://youtu.be/8jvoTV54nXw) by Curran Kelleher
+      - pracitcal step-by-step guide to building up useful plots in D3.js from scratch
+    - React + D3 [video by Shirley Wu](https://youtu.be/zXBdNDnqV2Q)
+      - excellent breakdown of how D3 can interface with other javascript libraries to get the best use out of each 
+        - use D3 for remapping and drawing axes 
+        - use something like React / Vue to handle rendering to DOM, user input
   
   - 🚧 monotonic splines 🚧
 
