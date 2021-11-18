@@ -179,8 +179,9 @@ It depends on your goals and use case. Select the goals that line up most closel
 One double-edged feature of Plotly is the gradient of multiple approaches to achieve the same plot:
 - Good-looking plots can be put together very quickly with **Plotly express** 
 - If you need more customization, you often end up switching to Plotly's **graph objects**. This has a similar level of customization to matplotlib 
-- If you want to compose multiple plots together, you use Plotly's **figure factor**
-While this flexible allows you to pick the right tool for the job, it makes looking through the documentation much more confusing.
+- If you want to compose multiple plots together, you use Plotly's **figure factory**
+
+While this flexible allows you to pick the right tool for the job, it makes looking through the **documentation much more confusing.**
 
   <!-- unfortunately multiple ways to accomplish a single task means looking through documentation can be difficult -->
 
@@ -316,7 +317,16 @@ Being able to share results and code with others, especially without them having
   
 - **Bokeh**
   - Embedding Bokeh content [docs](https://docs.bokeh.org/en/latest/docs/user_guide/embed.html) 
-    - can use `file_html()` or `json_item()`
+    > **Standalone documents**
+        These documents don’t require a Bokeh server to work. They may have many tools and interactions such as custom JavaScript callbacks but are otherwise nothing but HTML, CSS, and JavaScript. These documents can be embedded into other HTML pages as one large document or as a set of sub-components with individual templating.
+    - can use `file_html()` or `json_item()` to get standalone components
+    > **Bokeh applications**
+    These applications require a Bokeh server to work. Having a Bokeh server lets you connect events and tools to real-time Python callbacks that execute on the server. For more information about creating and running Bokeh apps, see Running a Bokeh server.
+
+  - Code for embedding using various servers - [examples repo](https://github.com/bokeh/bokeh/tree/branch-3.0/examples/howto/server_embed)
+    - includes standalone embed
+    - How to embed a bokeh server in a standalone - [stack overflow discussion](https://stackoverflow.com/questions/51802159/how-to-embed-a-bokeh-server-in-a-standalone)
+  
 
 #### [:fa-table: go back to comparison table :fa-table:](#visualization-library-options)
 --------------------------------------------
